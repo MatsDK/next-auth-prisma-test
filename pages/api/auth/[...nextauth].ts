@@ -22,7 +22,8 @@ export default NextAuth({
 		// Use JSON Web Tokens for session instead of database sessions.
 		// This option can be used with or without a database for users/accounts.
 		// Note: `jwt` is automatically set to `true` if no database is specified.
-		jwt: true,
+		strategy: "jwt"
+		// jwt: true,
 
 		// Seconds - How long until an idle session expires and is no longer valid.
 		// maxAge: 30 * 24 * 60 * 60, // 30 days
@@ -79,7 +80,7 @@ export default NextAuth({
 
 	// You can set the theme to 'light', 'dark' or use 'auto' to default to the
 	// whatever prefers-color-scheme is set to in the browser. Default is 'auto'
-	theme: 'light',
+	// theme: '',
 
 	// Enable debug messages in the console if you are having problems
 	debug: false,
