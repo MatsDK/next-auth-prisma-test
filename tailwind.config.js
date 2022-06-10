@@ -13,8 +13,9 @@ module.exports = {
         "text-light-1": "#fafafa",
         "text-light-2": "#a1a1a1",
         "accent-1": "#007bec",
-        "accent-2": "#0A3C87"
-      }
+        "accent-2": "#0A3C87",
+        "accent-3": "#FA00FF"
+      },
     },
   },
   plugins: [],

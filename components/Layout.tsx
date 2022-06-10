@@ -8,7 +8,7 @@ interface LayoutProps {
 
 export const Layout: React.FC<LayoutProps> = ({ children }) => {
 	return (
-		<div className="w-full h-full bg-primary-dark">
+		<div className="w-full h-full bg-primary-dark overflow-y-scroll scroll-smooth">
 			<Head>
 				<title>Next auth App</title>
 				<link rel="icon" href="/logo.svg" />
