@@ -6,7 +6,7 @@ interface TitleProps {
 
 export const Title: React.FC<TitleProps> = ({ }) => {
 	return (
-		<div className="flex flex-col items-center pt-36">
+		<div className="flex flex-col items-center pt-36 z-10">
 			<motion.h1
 				className="text-[70px] font-semibold text-text-light-1"
 				animate={{ opacity: 1, scale: 1 }}

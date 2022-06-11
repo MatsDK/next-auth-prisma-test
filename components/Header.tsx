@@ -21,8 +21,8 @@ export const Header: React.FC = ({ }) => {
 
         <ul className="flex list-none items-center gap-x-7 text-[16px] font-semibold ml-5">
           {links.map(({ label, link }, idx) => (
-            <li>
-              <Link key={idx} href={link}>
+            <li key={idx}>
+              <Link href={link}>
                 <button className="text-text-light-1 hover:text-accent-1 transition">{label}</button>
               </Link>
             </li>

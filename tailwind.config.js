@@ -16,6 +16,9 @@ module.exports = {
         "accent-2": "#0A3C87",
         "accent-3": "#FA00FF"
       },
+      backgroundImage: {
+          'gradient-radial': 'radial-gradient(var(--gradient-color-stops))',
+      }
     },
   },
   plugins: [],
