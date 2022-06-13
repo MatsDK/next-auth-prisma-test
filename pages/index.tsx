@@ -1,4 +1,5 @@
 import type { NextPage } from 'next'
+import { UsageSection } from '../components/UsageSection'
 import { useSession } from "next-auth/react"
 import { HomeSection } from '../components/HomeSection'
 import { Layout } from '../components/Layout'
@@ -11,9 +12,7 @@ const Home: NextPage = () => {
   return (
     <Layout>
       <HomeSection />
-      <section className="h-[60vh] bg-primary-light">
-        test
-      </section>
+      <UsageSection />
       <section id="how-it-works" className="h-[60vh]">
         test1
       </section>

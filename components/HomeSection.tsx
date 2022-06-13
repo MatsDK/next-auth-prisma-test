@@ -22,23 +22,23 @@ export const HomeSection: React.FC<HomeSectionProps> = ({ }) => {
 				</button>
 				<button className="text-text-light-1 font-semibold text-[16px]">How it works</button>
 			</div>
+			{/* <div className="mt-auto py-12 flex">
+				<span className="z-10 text-text-light-1 ">Active nodes</span>
+				<h1 className="font-bold text-text-light-1 text-5xl">1234</h1>
+			</div> */}
 		</div>
 	);
 }
 
-// import { motion as motion3d, MotionCanvas, LayoutCamera } from "framer-motion-3d"
 import { motion } from 'framer-motion';
 
 const Background = () => {
-	const [isHovered, setIsHovered] = useState(false)
 
 	return (
 		<motion.div
 			className="absolute inset-0 h-[800px] z-[0]"
-			onHoverStart={() => setIsHovered(true)}
-			onHoverEnd={() => setIsHovered(true)}
 		>
-			<Scene isHovered={isHovered} />
+			<Scene />
 		</motion.div >
 	)
 }
@@ -46,7 +46,7 @@ const Background = () => {
 import { Canvas } from "@react-three/fiber"
 import { motion as motion3d } from "framer-motion-3d"
 
-const Scene = ({ isHovered }: { isHovered: boolean }) => {
+const Scene = () => {
 	return (
 		<Canvas
 			resize={{ offsetSize: true }}
@@ -63,27 +63,6 @@ const Scene = ({ isHovered }: { isHovered: boolean }) => {
 					rotation={[-Math.PI / 4, 0, 0]}
 					position={[0, .4, 0]}
 					scale={1}
-					variants={{
-						unliked: {
-							x: [0, 0],
-							y: [0, 0],
-							scale: .9
-						},
-						liked: {
-							x: 4,
-							y: [0, -1.5, 2],
-							scale: 0.9,
-							transition: { duration: 0.5 }
-						},
-						hover: {
-							rotateZ: 0,
-							rotateY: 0.3,
-							scale: 3,
-							transition: {
-								rotateZ: { duration: 1.5, ease: "linear", repeat: Infinity }
-							}
-						}
-					}}
 				>
 					<planeBufferGeometry attach="geometry" args={[20, 20, 40, 30]} />
 					<meshPhongMaterial
